@@ -11,7 +11,11 @@ export default {
         sm: '1rem'
       }
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        'logoShadow': '8px 8px 0px lightblue',
+      }
+    },
   },
   plugins: [],
 }
