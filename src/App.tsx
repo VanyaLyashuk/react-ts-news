@@ -1,8 +1,8 @@
-import Logo from './components/UI/Logo'
+import Header from './components/header/Header'
 
 const App = () => {
   return (
-    <Logo />
+    <Header />
   )
 }
 
