@@ -19,7 +19,7 @@ const App = () => {
     };
   }, [isOpened]);
 
-  const mainClasses = classNames("h-full pt-[100px] transition-padding duration-300", {
+  const mainClasses = classNames("h-full pt-[98px] transition-padding duration-300", {
     "h-screen overflow-y-scroll pl-[270px] md:pl-[300px] lg:pl-0": isOpened
   });
 
