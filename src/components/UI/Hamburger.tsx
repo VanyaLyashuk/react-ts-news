@@ -8,7 +8,7 @@ const Hamburger = ({isOpened, toggleNav}: IProps) => {
   return (
     <button 
       onClick={() => toggleNav()}
-      className="relative group">
+      className="relative group lg:hidden">
       <div className="relative flex items-center justify-center overflow-hidden transition-all duration-200 transform ring-0">
         <div className="flex flex-col justify-between w-[32px] h-[24px] transform transition-all duration-300 origin-center overflow-hidden">
           <div 
