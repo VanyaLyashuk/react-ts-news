@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import Logo from "../UI/Logo";
+import NavList from './NavList';
 
 interface IProps {
   categories: string[];
@@ -20,22 +21,7 @@ const NavMob = ({ categories, isOpened }: IProps) => {
       <div className={navLogoClasses}>
         <Logo />
       </div>
-      <ul className="w-full">
-        {categories.map((category: string) => {
-          const linkClasses =
-            "block py-3 text-2xl tracking-wider text-center font-medium";
-          const capitalizedFirstLetter =
-            category.charAt(0).toUpperCase() + category.slice(1);
-
-          return (
-            <li key={`key-${category}`}>
-              <a href="" className={linkClasses}>
-                {capitalizedFirstLetter}
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+      <NavList categories={categories}/>
     </nav>
   );
 };
