@@ -1,15 +1,17 @@
 import classNames from "classnames";
 import Hamburger from "../UI/Hamburger";
 import Logo from "../UI/Logo";
+import NavDesk from "../nav/NavDesk";
 
 interface IProps {
   isOpened: boolean;
   toggleNav: () => void;
+  categories: string[];
 }
 
-const Header = ({ isOpened, toggleNav }: IProps) => {
+const Header = ({ isOpened, toggleNav, categories }: IProps) => {
   const headerClasses = classNames(
-    "py-6 w-full fixed bg-white border-b-4 border-black sm:py-6 z-10 "
+    "py-5 w-full fixed bg-white border-b-4 border-black z-10 lg:overflow-hidden"
   );
 
   return (
@@ -18,6 +20,7 @@ const Header = ({ isOpened, toggleNav }: IProps) => {
         <div className="flex justify-between item-center">
           <Logo />
           <Hamburger isOpened={isOpened} toggleNav={toggleNav} />
+          <NavDesk categories={categories}/>
         </div>
       </div>
     </header>

@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import Logo from "../UI/Logo";
+import NavDesk from './NavDesk';
 import NavList from './NavList';
 
 interface IProps {
@@ -14,12 +15,13 @@ const NavMob = ({ categories, isOpened }: IProps) => {
       "w-[270px] md:w-[300px] transition-all border-r-4 border-black": isOpened,
     }
   );
-  const navLogoClasses = classNames("fixed top-6 opacity-0 transition-opacity delay-[55ms]", {"opacity-100": isOpened});
+  const navLogoClasses = classNames("fixed top-5 opacity-0 transition-opacity delay-[55ms]", {"opacity-100": isOpened});
 
   return (
     <nav className={navClasses}>
       <div className={navLogoClasses}>
         <Logo />
+        <NavDesk  categories={categories}/>
       </div>
       <NavList categories={categories}/>
     </nav>
