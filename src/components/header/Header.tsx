@@ -17,7 +17,7 @@ const Header = ({ isOpened, toggleNav, categories }: IProps) => {
   return (
     <header className={headerClasses}>
       <div className="container m-auto">
-        <div className="flex justify-between item-center">
+        <div className="flex justify-between item-center 2xl:relative">
           <Logo />
           <Hamburger isOpened={isOpened} toggleNav={toggleNav} />
           <NavDesk categories={categories}/>

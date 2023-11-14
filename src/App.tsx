@@ -34,7 +34,7 @@ const App = () => {
   ];
   return (
     <>
-      <Header isOpened={isOpened} toggleNav={toggleNav} />
+      <Header isOpened={isOpened} toggleNav={toggleNav} categories={categories} />
       <NavMob categories={categories} isOpened={isOpened} />
       <main className={mainClasses}>
         <div className="container m-auto">
