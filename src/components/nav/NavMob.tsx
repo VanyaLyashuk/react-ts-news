@@ -1,14 +1,12 @@
 import classNames from "classnames";
+import { useAppSelector } from '../../hooks/hook';
 import Logo from "../UI/Logo";
 import NavDesk from './NavDesk';
 import NavList from './NavList';
 
-interface IProps {
-  categories: string[];
-  isOpened: boolean;
-}
+const NavMob = () => {
+  const {isOpened} = useAppSelector(state => state.navigation);
 
-const NavMob = ({ categories, isOpened }: IProps) => {
   const navClasses = classNames(
     "pt-5 landscape:pb-[80px] w-0 bg-white transition-all duration-300 overflow-x-hidden overflow-y-scroll  absolute h-full let-0 top-0 lg:hidden flex flex-col items-center z-20",
     {
@@ -21,9 +19,9 @@ const NavMob = ({ categories, isOpened }: IProps) => {
     <nav className={navClasses}>
       <div className={navLogoClasses}>
         <Logo />
-        <NavDesk  categories={categories}/>
+        <NavDesk />
       </div>
-      <NavList categories={categories}/>
+      <NavList />
     </nav>
   );
 };

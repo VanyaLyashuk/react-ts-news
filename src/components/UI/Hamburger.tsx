@@ -1,13 +1,13 @@
-interface IProps {
-  isOpened: boolean;
-  toggleNav: () => void;
-}
+import { useAppDispatch, useAppSelector } from '../../hooks/hook';
+import { toggleNav } from '../../store/navSlice';
 
-const Hamburger = ({isOpened, toggleNav}: IProps) => {
-
+const Hamburger = () => {
+  const {isOpened} = useAppSelector(state => state.navigation);
+  const dispatch = useAppDispatch();
+  
   return (
     <button 
-      onClick={() => toggleNav()}
+      onClick={() => dispatch(toggleNav())}
       className="relative group lg:hidden">
       <div className="relative flex items-center justify-center overflow-hidden transition-all duration-200 transform ring-0">
         <div className="flex flex-col justify-between w-[32px] h-[24px] transform transition-all duration-300 origin-center overflow-hidden">

@@ -1,8 +1,7 @@
-interface IProps {
-  categories: string[]
-}
+import { useAppSelector } from '../../hooks/hook';
 
-const NavList = ({categories}: IProps) => {
+const NavList = () => {
+  const {categories} = useAppSelector(state => state.navigation);
   return (
     <ul className="w-full lg:flex lg:items-center lg:gap-3 xl:gap-6 2xl:justify-center">
       {categories.map((category: string) => {

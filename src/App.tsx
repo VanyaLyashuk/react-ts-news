@@ -1,11 +1,11 @@
 import classNames from "classnames";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Header from "./components/header/Header";
 import NavMob from "./components/nav/NavMob";
+import { useAppSelector } from './hooks/hook';
 
 const App = () => {
-  const [isOpened, setIsOpened] = useState(false);
-  const toggleNav = (): void => setIsOpened(!isOpened);
+  const {isOpened} = useAppSelector(state => state.navigation);
 
   useEffect(() => {
     if (isOpened) {
@@ -23,19 +23,10 @@ const App = () => {
     "h-screen overflow-y-scroll pl-[270px] md:pl-[300px] lg:pl-0": isOpened
   });
 
-  const categories = [
-    "business",
-    "entertainment",
-    "general",
-    "health",
-    "science",
-    "sports",
-    "technology",
-  ];
   return (
     <>
-      <Header isOpened={isOpened} toggleNav={toggleNav} categories={categories} />
-      <NavMob categories={categories} isOpened={isOpened} />
+      <Header />
+      <NavMob />
       <main className={mainClasses}>
         <div className="container m-auto">
           <p>
