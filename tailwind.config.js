@@ -14,6 +14,9 @@ export default {
     extend: {
       boxShadow: {
         'logoShadow': '8px 8px 0px lightblue',
+      },
+      aspectRatio: {
+        '4/3': '4 / 3'
       }
     },
   },

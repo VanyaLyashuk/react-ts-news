@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { useEffect } from "react";
 import Header from "./components/header/Header";
 import NavMob from "./components/nav/NavMob";
+import NewsCard from './components/news-card/NewsCard';
 import { useAppSelector } from './hooks/hook';
 
 const App = () => {
@@ -20,7 +21,7 @@ const App = () => {
   }, [isOpened]);
 
   const mainClasses = classNames("h-full pt-[98px] transition-padding duration-300", {
-    "h-screen overflow-y-scroll pl-[270px] md:pl-[320px] lg:pl-0": isOpened
+    "h-screen overflow-y-scroll": isOpened
   });
 
   return (
@@ -29,7 +30,7 @@ const App = () => {
       <NavMob />
       <main className={mainClasses}>
         <div className="container m-auto">
-
+          <NewsCard />
         </div>
       </main>
     </>
