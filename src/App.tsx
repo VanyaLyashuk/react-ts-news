@@ -30,9 +30,8 @@ const App = () => {
       <Header />
       <NavMob />
       <main className={mainClasses}>
-        <div className="container m-auto">
-          <NewsCarousel />
-        </div>
+        <NewsCarousel category="Business" reversed={false}/>
+        <NewsCarousel category="Entertainment" reversed={true}/>
       </main>
     </>
   );

@@ -5,7 +5,7 @@ import NavDesk from "../nav/NavDesk";
 
 const Header = () => {
   const headerClasses = classNames(
-    "py-5 w-full fixed bg-white border-b-4 border-black z-10 lg:overflow-hidden"
+    "py-5 w-full fixed bg-white border-b-4 border-black z-20 lg:overflow-hidden"
   );
 
   return (

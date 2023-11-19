@@ -10,7 +10,7 @@ const NavMob = () => {
   const navClasses = classNames(
     "pt-5 landscape:pb-[80px] w-0 bg-white transition-all duration-300 overflow-x-hidden overflow-y-scroll  absolute h-full let-0 top-0 lg:hidden flex flex-col items-center z-20",
     {
-      "w-[270px] md:w-[320px] transition-all border-r-4 border-black scrollbar-hide landscape:scrollbar-default":
+      "w-[270px] sm:w-[320px] transition-all border-r-4 border-black scrollbar-hide landscape:scrollbar-default":
         isOpened,
     }
   );

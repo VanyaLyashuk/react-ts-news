@@ -4,23 +4,25 @@
 
 @layer components {
   #root {
-    @apply relative h-full min-h-screen;    
+    @apply relative h-full min-h-screen;
   }
 }
 
 /* slider styles */
-.mySwiper {
-  padding-top: 60px;
-  padding-bottom: 40px;
-  margin-top: 50px;
-}
 
-.mySwiper .swiper-button-prev {
+.mySwiper.mySwiperRegular .swiper-button-prev {
   left: auto;
-  right: 60px;
+  right: 52px;
 }
-.mySwiper .swiper-button-next {
+.mySwiper.mySwiperRegular .swiper-button-next {
   right: 0;
+}
+.mySwiper.mySwiperReversed .swiper-button-prev {
+  left: 0;
+}
+.mySwiper.mySwiperReversed .swiper-button-next {
+  left: 52px;
+  right: auto;
 }
 
 .mySwiper .swiper-button-next,
@@ -28,8 +30,8 @@
   color: black;
   font-weight: bold;
   border: 4px solid;
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   top: 0px;
   margin-top: 0px;
   transition: background 250ms ease-in;
@@ -39,14 +41,13 @@
 .mySwiper .swiper-button-next:after,
 .mySwiper .swiper-button-prev:before,
 .mySwiper .swiper-button-prev:after {
-  content: '';
-  width: 24px;
+  content: "";
+  width: 16px;
   height: 4px;
   background-color: #000;
   position: absolute;
   transition: background-color 250ms ease-in;
 }
-
 
 .mySwiper .swiper-button-next:before,
 .mySwiper .swiper-button-next:after {
@@ -59,13 +60,13 @@
 .mySwiper .swiper-button-prev:before,
 .mySwiper .swiper-button-next:before {
   transform: rotate(45deg);
-  top: 12px;
+  top: 10px;
 }
 
 .mySwiper .swiper-button-next:after,
 .mySwiper .swiper-button-prev:after {
   transform: rotate(-45deg);
-  bottom: 12px;
+  bottom: 10px;
 }
 .mySwiper .swiper-button-next:after,
 .mySwiper .swiper-button-prev:after {
@@ -98,10 +99,14 @@
   background-color: white;
 }
 
-.swiper-button-prev.swiper-button-disabled, 
+.swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
-  opacity: .1;
+  opacity: 0.1;
   background-color: none;
+}
+
+.mySwiper .swiper-pagination-horizontal {
+  bottom: 0;
 }
 
 .swiper-pagination-bullet {
@@ -109,10 +114,54 @@
   height: 10px;
   background: #000;
   border-radius: 0;
-  opacity: .1;
+  opacity: 0.1;
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   opacity: 1;
 }
 
+@media (min-width: 370px) {
+  .mySwiper.mySwiperRegular .swiper-button-prev {
+    left: auto;
+    right: 60px;
+  }
+  .mySwiper.mySwiperReversed .swiper-button-next {
+    left: 60px;
+    right: auto;
+  }
+  .mySwiper .swiper-button-next,
+  .mySwiper .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+  }
+  .mySwiper .swiper-button-next:before,
+  .mySwiper .swiper-button-next:after,
+  .mySwiper .swiper-button-prev:before,
+  .mySwiper .swiper-button-prev:after {
+    width: 24px;
+  }
+  .mySwiper .swiper-button-next:before,
+  .mySwiper .swiper-button-next:after {
+    right: 8px;
+  }
+  .mySwiper .swiper-button-prev:before,
+  .mySwiper .swiper-button-prev:after {
+    left: 8px;
+  }
+  .mySwiper .swiper-button-prev:before,
+  .mySwiper .swiper-button-next:before {
+    top: 12px;
+  }
+  .mySwiper .swiper-button-next:after,
+  .mySwiper .swiper-button-prev:after {
+    bottom: 12px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+  }
+}
