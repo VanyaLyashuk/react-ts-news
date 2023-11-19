@@ -37,6 +37,13 @@ const NewsCarousel = () => {
             slidesPerGroup: 3,
             centeredSlides: false,
             centeredSlidesBounds: true,
+          },
+          1024: {
+            spaceBetween: 16,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            centeredSlides: false,
+            centeredSlidesBounds: true,
           }
         }}
         className="mySwiper"
