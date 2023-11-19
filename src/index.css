@@ -2,8 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
-#root {
-  height: 100%;
-  min-height: 100vh;
-  position: relative;
+@layer components {
+  #root {
+    @apply relative h-full min-h-screen;    
+  }
 }
+
+/* slider styles */
+.mySwiper {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  margin-top: 50px;
+}
+
+.mySwiper .swiper-button-prev {
+  left: auto;
+  right: 60px;
+}
+.mySwiper .swiper-button-next {
+  right: 0;
+}
+
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: black;
+  font-weight: bold;
+  border: 4px solid;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  margin-top: 0px;
+  transition: background 250ms ease-in;
+}
+
+.mySwiper .swiper-button-next:before,
+.mySwiper .swiper-button-next:after,
+.mySwiper .swiper-button-prev:before,
+.mySwiper .swiper-button-prev:after {
+  content: '';
+  width: 24px;
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+  transition: background-color 250ms ease-in;
+}
+
+
+.mySwiper .swiper-button-next:before,
+.mySwiper .swiper-button-next:after {
+  right: 8px;
+}
+.mySwiper .swiper-button-prev:before,
+.mySwiper .swiper-button-prev:after {
+  left: 8px;
+}
+.mySwiper .swiper-button-prev:before,
+.mySwiper .swiper-button-next:before {
+  transform: rotate(45deg);
+  top: 12px;
+}
+
+.mySwiper .swiper-button-next:after,
+.mySwiper .swiper-button-prev:after {
+  transform: rotate(-45deg);
+  bottom: 12px;
+}
+.mySwiper .swiper-button-next:after,
+.mySwiper .swiper-button-prev:after {
+  transform: rotate(-45deg);
+  bottom: 12px;
+}
+.mySwiper .swiper-button-prev:before {
+  transform: rotate(-45deg);
+}
+.mySwiper .swiper-button-prev:after {
+  transform: rotate(45deg);
+}
+
+.mySwiper .swiper-button-next:hover,
+.mySwiper .swiper-button-next:focus,
+.mySwiper .swiper-button-prev:hover,
+.mySwiper .swiper-button-prev:focus {
+  background-color: black;
+  transition: background-color 250ms ease-in;
+}
+
+.mySwiper .swiper-button-next:hover:before,
+.mySwiper .swiper-button-next:focus:before,
+.mySwiper .swiper-button-prev:hover:before,
+.mySwiper .swiper-button-prev:focus:before,
+.mySwiper .swiper-button-next:hover:after,
+.mySwiper .swiper-button-next:focus:after,
+.mySwiper .swiper-button-prev:hover:after,
+.mySwiper .swiper-button-prev:focus:after {
+  background-color: white;
+}
+
+.swiper-button-prev.swiper-button-disabled, 
+.swiper-button-next.swiper-button-disabled {
+  opacity: .1;
+  background-color: none;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 0;
+  opacity: .1;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+

@@ -2,7 +2,8 @@ import classNames from "classnames";
 import { useEffect } from "react";
 import Header from "./components/header/Header";
 import NavMob from "./components/nav/NavMob";
-import NewsCard from './components/news-card/NewsCard';
+
+import NewsCarousel from './components/news-carousel/NewsCarousel';
 import { useAppSelector } from './hooks/hook';
 
 const App = () => {
@@ -30,7 +31,7 @@ const App = () => {
       <NavMob />
       <main className={mainClasses}>
         <div className="container m-auto">
-          <NewsCard />
+          <NewsCarousel />
         </div>
       </main>
     </>
