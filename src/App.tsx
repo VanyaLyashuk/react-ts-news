@@ -32,6 +32,11 @@ const App = () => {
       <main className={mainClasses}>
         <NewsCarousel category="Business" reversed={false}/>
         <NewsCarousel category="Entertainment" reversed={true}/>
+        <NewsCarousel category="General" reversed={false}/>
+        <NewsCarousel category="Health" reversed={true}/>
+        <NewsCarousel category="Science" reversed={false}/>
+        <NewsCarousel category="Sports" reversed={true}/>
+        <NewsCarousel category="Technology" reversed={false}/>
       </main>
     </>
   );
