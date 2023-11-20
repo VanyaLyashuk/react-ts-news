@@ -22,7 +22,7 @@ const NewsCarousel = ({category, reversed}: IProps) => {
   const carouselClasses = classNames("mySwiper pt-[50px] min-[370px]:pt-[60px] pb-[36px] xl:pb-[50px]", {"mySwiperReversed": reversed, "mySwiperRegular": !reversed});
   const titleClasses = classNames("absolute z-10 text-[24px] min-[370px]:text-3xl font-bold top-1 min-[370px]:top-[7px] xl:text-4xl", {"left-4": !reversed, "right-4": reversed});
   return (
-    <div className="pt-[60px] pb-[56px] border-b-4 border-black lg:pt-[80px] lg:pb-[76px]">
+    <div className="pt-[60px] pb-[54px] border-b-4 border-black lg:pt-[80px] lg:pb-[74px]">
       <div className="container relative m-auto">
         <a className={titleClasses} href="">{category}</a>
         <Swiper
