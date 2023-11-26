@@ -4,6 +4,7 @@ import Header from "./components/header/Header";
 import NavMob from "./components/nav/NavMob";
 
 import NewsCarousel from './components/news-carousel/NewsCarousel';
+import NewsGrid from './components/pages/NewsGrid';
 import { useAppSelector } from './hooks/hook';
 
 const App = () => {
@@ -21,7 +22,7 @@ const App = () => {
     };
   }, [isOpened]);
 
-  const mainClasses = classNames("h-full pt-[98px] transition-padding duration-300", {
+  const mainClasses = classNames("h-full pt-[90px] transition-padding duration-300", {
     "h-screen overflow-y-scroll": isOpened
   });
 
@@ -30,13 +31,14 @@ const App = () => {
       <Header />
       <NavMob />
       <main className={mainClasses}>
-        <NewsCarousel category="Business" reversed={false}/>
+        {/* <NewsCarousel category="Business" reversed={false}/>
         <NewsCarousel category="Entertainment" reversed={true}/>
         <NewsCarousel category="General" reversed={false}/>
         <NewsCarousel category="Health" reversed={true}/>
         <NewsCarousel category="Science" reversed={false}/>
         <NewsCarousel category="Sports" reversed={true}/>
-        <NewsCarousel category="Technology" reversed={false}/>
+        <NewsCarousel category="Technology" reversed={false}/> */}
+        <NewsGrid title="Business" category="business"/>
       </main>
     </>
   );
