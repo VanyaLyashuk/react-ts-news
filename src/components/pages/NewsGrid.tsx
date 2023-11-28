@@ -1,3 +1,4 @@
+import Button from '../UI/Button';
 import NewsCard from '../news-card/NewsCard';
 
 interface INewsGrid {
@@ -25,6 +26,7 @@ const NewsGrid = ({title}: INewsGrid) => {
           <NewsCard />
           <NewsCard />
         </div>
+        <Button text='Show more'/>
       </div>
     </div>
   )
